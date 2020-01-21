@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <React.Fragment>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -35,13 +35,9 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <footer>© {new Date().getFullYear()}</footer>
       </div>
-    </>
+    </React.Fragment>
   )
 }
 
